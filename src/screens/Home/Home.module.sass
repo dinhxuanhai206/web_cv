@@ -1,0 +1,116 @@
+@import '../../styles/app'
+.home
+    min-height: 100vh
+    padding: 150px 200px
+    display: flex
+    justify-content: space-between
+    gap: 40px
+    width: 100%
+    +m
+        padding: 50px 20px
+    .left
+        width: 60%
+        +m
+            width: 100%
+        .name
+            font-size: 4rem
+            font-weight: bold
+            +m
+                font-size: 1.8rem
+
+        .title
+            font-size: 8rem
+            font-weight: bold
+            +m
+                font-size: 4rem
+        .desc
+            margin-top: 20px
+            font-size: 2rem
+            +m
+                font-size: 1.6rem
+        .btn
+            margin-top: 70px
+            padding: 10px 20px
+            text-decoration: none
+            display: inline-block
+            border: 1px solid $cyan
+            color: black
+            text-transform: uppercase
+            letter-spacing: 2px
+            position: relative
+            overflow: hidden
+            transition: 0.2s
+            font-size: 1.2rem
+            +dark
+                color: white
+                border: 1px solid $violet
+            &:hover
+                background: $cyan
+                box-shadow: 0 0 5px rgb(73, 172, 247),0 0 30px rgb(46, 175, 245),0 0 60px rgb(62, 138, 244)
+                transition-delay: 1s
+                color: aliceblue
+
+                +dark
+                    background: $violet
+
+            & span
+                position: absolute
+                display: block
+
+            & span:nth-child(1)
+
+                top: 0
+                left: -100%
+                width: 100%
+                height: 3px
+                background: linear-gradient(90deg,transparent,rgb(77, 86, 251))
+
+            &:hover span:nth-child(1)
+                left: 100%
+                transition: 1s
+
+            & span:nth-child(3)
+
+                bottom: 0
+                right: -100%
+                width: 100%
+                height: 3px
+                background: linear-gradient(270deg,transparent,rgb(8, 83, 245))
+
+            &:hover span:nth-child(3)
+                right: 100%
+                transition: 1s
+                transition-delay: 0.5s
+
+            & span:nth-child(2)
+
+                top: -100%
+                right: 0
+                width: 3px
+                height: 100%
+                background: linear-gradient(180deg,transparent,rgb(38, 110, 245))
+
+            &:hover span:nth-child(2)
+                top: 100%
+                transition: 1s
+                transition-delay: 0.25s
+
+            & span:nth-child(4)
+                bottom: -100%
+                left: 0
+                width: 3px
+                height: 100%
+                background: linear-gradient(180deg,transparent,rgb(89, 155, 255))
+
+            &:hover span:nth-child(4)
+                bottom: 100%
+                transition: 1s
+                transition-delay: 0.75s
+    .right
+        width: 40%
+        +m
+            display: none
+        .img
+            width: 80%
+            height: 70%
+            border-radius: 50%

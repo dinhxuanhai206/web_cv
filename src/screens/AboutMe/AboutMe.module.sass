@@ -1,0 +1,140 @@
+@import '../../styles/app'
+.about-container
+    min-height: 100vh
+    padding: 80px 200px
+    +m
+        padding: 0
+    .about
+        background-color: rgba(159, 191, 251, 0.3)
+        min-height: 80vh
+        padding: 20px 30px
+        +m
+            padding: 20px
+        +dark
+            background-color: rgba(3, 3, 3, 0.5)
+            +m
+                background-color: rgba(159, 191, 251, 0)
+        .title
+            position: relative
+            font-size: 1.4rem
+            font-weight: 600
+            color: #323131
+            +dark
+                color: #a3a1a1
+            +m
+                font-size: 1rem
+            &::before
+                content: ""
+                left: 60px
+                top: 10px
+                width: 90px
+                height: 1px
+                background: #053af8
+                position: absolute
+                +m
+                    left: 45px
+                    top: 7px
+                +dark
+                    background: $violet
+        .desc
+            font-size: 3.1rem
+            font-weight: bold
+            +m
+                font-size: 2rem
+        .content
+            display: flex
+            gap: 40px
+            width: 100%
+            margin-top: 30px
+            +m
+                display: block
+            .image
+                width: 31%
+                height: 400px
+                margin-top: 10px
+                +m
+                    width: 100%
+                    height: 450px
+                    margin-bottom: 20px
+                .img
+                    border-radius: 5px
+                    width: 100%
+                    height: 100%
+
+            .content-ui
+                +m
+                    width: 100%
+                .ui-title
+                    color: $cyan
+                    font-size: 3rem
+                    font-weight: bold
+                    +dark
+                        color: $violet
+                .ui-desc
+                    font-weight: 500
+                    font-style: italic
+                .ui-info
+                    display: flex
+                    margin-top: 40px
+                    width: 100%
+                    +m
+                        display: block
+                        width: 100%
+                    .info-left
+                        width: 50%
+                        +m
+                            width: 100%
+                    .info
+                        margin-bottom: 20px
+                        font-size: 1.8rem
+                        & span
+                            margin-right: 8px
+                            font-weight: bold
+                        .icon
+                            margin-top: -2px
+                            color: #67C8FF
+                            font-size: 14px
+                            +dark
+                                margin-top: -2px
+                                color: #4ceb95
+                                font-size: 14px
+                .ui-text
+                    margin-top: 15px
+        .counts
+            margin-top: 40px
+            display: flex
+            justify-content: space-between
+            gap: 30px
+            width: 100%
+            +m
+                flex-wrap: wrap
+                gap: 20px
+            .item
+                width: 25%
+                position: relative
+                text-align: center
+                border-radius: 5px
+                background: rgba(7, 24, 218, 0.08)
+                +m
+                    width: 47%
+                +dark
+                    background: rgba(255, 255, 255, 0.08)
+                .icon
+                    position: absolute
+                    top: -25px
+                    left: 50%
+                    transform: translateX(-50%)
+                    padding: 6px 13px
+                    border-radius: 50%
+                    font-size: 2.4rem
+                    margin: auto
+                    color: #0e6dfa
+                    background: rgba(114, 125, 251, 0.1)
+                    +dark
+                        color: #18d26e
+                        background: rgba(255, 255, 255, 0.1)
+                .block
+                    padding: 30px
+                    .number
+                        font-size: 3.8rem
+                        font-weight: 600

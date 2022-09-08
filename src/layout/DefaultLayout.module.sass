@@ -1,0 +1,41 @@
+@import '../styles/app'
+
+.default-layout
+    overflow: hidden
+
+.bg-attachment
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    h1
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        color: #e8e8ff
+        font-size: 40rem
+        letter-spacing: 0.5rem
+        +Teko
+        font-weight: 700
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        +dark
+            color: #2020206b
+        +x
+            font-size: 40rem
+        +d
+            font-size: 35rem
+        +t
+            font-size: 24rem
+        +m
+            width: unset
+            font-size: 20rem
+            left: 25%
+            transform: translate(-50%, -50%) rotateZ(90deg)
+        +s
+            font-size: 25rem

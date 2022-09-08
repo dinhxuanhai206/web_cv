@@ -1,0 +1,72 @@
+@import ../../styles/app
+.social-media
+    position: fixed
+    bottom: 30px
+    left: 30px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    z-index: 1000
+    gap: 1.5rem
+    +t
+        top: 30px
+        left: 30px
+        bottom: unset
+    +m
+        top: unset
+        left: 16px
+        bottom: 130px
+
+.social-item
+    position: relative
+    border: 2px solid $bg-light-50
+    background: $bg-light-10
+    border-radius: 5px
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: transform .3s linear
+    animation: tranlateAnimate 1s forwards
+    transform: translateX(-100px)
+    box-shadow: 5px 4px $cyan
+
+    +dark
+        border-color: $bg-black-50
+        background: $bg-black-10
+        box-shadow: 5px 4px $violet
+    
+    svg
+        width: 55%
+        height: 55%
+        color: $cyan
+        transition: transform .3s linear
+        +dark
+            color: $violet
+    &:active
+        border-color: $cyan
+        box-shadow: 5px 4px $cyan
+        left: 10px
+        +dark
+            border-color: $violet
+            box-shadow: 5px 4px $violet
+
+    &:hover, &:active
+        background: $bg-light-900
+        +dark
+            background: $bg-black-900
+
+    +m
+        width: 35px
+        height: 35px
+
+@keyframes tranlateAnimate
+    0%
+       transform: translateX(-100px)
+    30%
+        transform: translateX(20px) rotateZ(30deg)
+    60%
+        transform: translateX(-15px) rotate(-10deg)
+    100%
+       transform: translateX(0)

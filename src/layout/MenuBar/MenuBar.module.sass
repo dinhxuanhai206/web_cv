@@ -1,0 +1,217 @@
+@import ../../styles/app
+
+.navbar-section
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    width: 8rem
+    height: 100%
+    background: $bg-light-100
+    border-left: 0.5rem solid $bg-light-50
+    z-index: 9999
+    +dark
+        background: $bg-black-100
+        border-left-color: $bg-black-50
+    +t
+        width: 100%
+        height: 80px
+        top: unset
+        bottom: 0
+        left: 0
+        right: 0
+        border-top: 0.3rem solid $cyan
+        border-left: none
+        +dark
+            border-top-color: $violet
+    +m
+        width: 100%
+        height: 73px
+        border-left: none
+        border-top: 0.3rem solid $cyan
+        +dark
+            border-top-color: $violet
+.navbar
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    gap: 10px
+    color: $cyan
+
+    +dark
+        color: $violet
+    +t
+        flex-direction: row
+    +m
+        gap: 0
+
+.nav-item
+    cursor: pointer
+    position: relative
+    width: 100px
+    height: 100px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    transition: all .3s
+    z-index: 1
+    border-radius: 50%
+    border: 1rem solid transparent
+    animation: end_bubble 1.2s forwards
+    &:hover
+        .title
+            position: absolute
+            left: calc(-100% - 3rem)
+            display: block
+            width: 100px
+            height: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 5px
+            background: $bg-light-100
+            border: 1px solid $bg-light-50
+            animation: hover_text .5s forwards
+            +dark
+                background: $bg-black-100
+                border-color: $bg-black-50
+
+    +t
+        animation: end_bubble_mobile 1.2s forwards
+    +m
+        height: 100%
+        max-width: 70px
+        width: 100%
+        animation: end_bubble_mobile 1.2s forwards
+
+.nav-icon
+    svg
+        width: 3rem
+        height: auto
+        +t
+            width: 32px
+        +m
+            width: 24px
+
+.nav-active
+    z-index: 1
+    border-radius: 50%
+    background: $bg-light-100
+    border: 0.5rem solid $cyan
+    animation: bubble 1s forwards
+    overflow: hidden
+    +dark
+        background: $bg-black-100
+        border-color: $violet
+    &:hover
+        .wrapper
+            animation: iconAnimate 1s forwards
+            +t
+                animation: none
+            +m
+                animation: none
+        .title
+            position: unset
+            width: unset
+            height: unset
+            animation: unset
+            border: unset
+    .title
+        display: block
+
+    +t
+        animation: bubble_mobile 1s forwards
+    +m
+        animation: bubble_mobile 1s forwards
+        border: 0.3rem solid $cyan
+
+.wrapper
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+.title
+    display: none
+    font-weight: 600
+    letter-spacing: 1px
+    +Teko
+    text-transform: uppercase
+    font-size: 18px
+    line-height: 30px
+    +m
+        font-size: 14px
+
+@keyframes iconAnimate
+    0%
+        transform: translateX(0)
+        opacity: 1
+    20%
+        transform: translateX(1rem)
+        opacity: 1
+    50%
+        transform: translateX(-10rem)
+        opacity: 0
+    70%
+        transform: translateX(10rem)
+        opacity: 0
+    80%
+        transform: translateX(-1rem)
+        opacity: 1
+    90%
+        transform: translateX(2rem)
+        opacity: 1
+    100%
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes bubble
+    0%
+        transform: translateX(100%)
+    30%
+        transform: translateX(-7.5rem)
+    60%
+        transform: translateX(-2rem)
+    100%
+        transform: translateX(-4.5rem)
+
+@keyframes bubble_mobile
+    0%
+        transform: translateY(100%)
+    30%
+        transform: translateY(-7.5rem)
+    60%
+        transform: translateY(-2rem)
+    100%
+        transform: translateY(-4.5rem)
+
+@keyframes end_bubble
+    0%
+        transform: translateX(-3.5rem)
+    30%
+        transform: translateX(100%)
+    60%
+        transform: translateX(-2rem)
+    100%
+        transform: translateX(0)
+
+@keyframes end_bubble_mobile
+    0%
+        transform: translateY(-3.5rem)
+    30%
+        transform: translateY(100%)
+    60%
+        transform: translateY(-2rem)
+    100%
+        transform: translateY(0)
+
+@keyframes hover_text
+    0%
+        opacity: 0
+    100%
+        opacity: 1

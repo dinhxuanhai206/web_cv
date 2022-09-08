@@ -1,0 +1,172 @@
+@import '../../styles/app'
+.skill-container
+    min-height: 100vh
+    padding: 50px 200px
+    +m
+        padding: 0
+    .skill
+        background-color: rgba(159, 191, 251, 0.3)
+        min-height: 90vh
+        padding: 20px 30px
+        +m
+            padding: 20px
+        +dark
+            background-color: rgba(3, 3, 3, 0.5)
+            +m
+                background-color: rgba(159, 191, 251, 0)
+        .title
+            margin-bottom: 20px
+            position: relative
+            font-size: 1.4rem
+            font-weight: 600
+            color: #323131
+            +dark
+                color: #a3a1a1
+            &::before
+                content: ""
+                left: 60px
+                top: 10px
+                width: 90px
+                height: 1px
+                background: #053af8
+                position: absolute
+                +dark
+                    background: $violet
+        .block-skill
+            display: flex
+            width: 100%
+            flex-wrap: wrap
+            gap: 10px 30px
+            margin-bottom: 30px
+            .skill-item
+                width: 48.9%
+                +m
+                    width: 100%
+        .title-resume
+            margin-bottom: 20px
+            position: relative
+            font-size: 1.4rem
+            font-weight: 600
+            color: #323131
+            +dark
+                color: #a3a1a1
+            &::before
+                content: ""
+                left: 70px
+                top: 10px
+                width: 90px
+                height: 1px
+                background: #053af8
+                position: absolute
+                +dark
+                    background: $violet
+        .resume-block
+            display: flex
+            width: 100%
+            gap: 30px
+            +m
+                display: block
+            .left
+                width: 50%
+                +m
+                    width: 100%
+                .education-title
+                    font-size: 2.8rem
+                    font-weight: bold
+                .education
+                    display: flex
+                    gap: 10px
+                    margin-top: 20px
+                    position: relative
+                    .dog
+                        width: 15px
+                        height: 15px
+                        border-radius: 50%
+                        background: #1f59f9
+                        +m
+                            width: 21px
+
+                        +dark
+                            background: $violet
+
+                        &::before
+                            content: ""
+                            top: 15px
+                            left: 6px
+                            position: absolute
+                            height: 200px
+                            width: 2px
+                            background: #504f4f
+                            +m
+                                height: 250px
+
+                    .education-log
+                        margin-top: -4px
+                        .desc
+                            font-weight: 600
+                            color: #1f59f9
+                            +dark
+                                color: $violet
+                        .btn
+                            width: 150px
+                            font-size: 1.4rem
+                            padding: 2px 0px
+                            text-align: center
+                            background-color: rgba(105, 106, 108, 0.4)
+                            border-radius: 2px
+                            margin: 7px 0
+                        .text
+                            font-style: italic
+                            margin-bottom: 15px
+
+            .right
+                width: 50%
+                +m
+                    margin-top: 40px
+                    width: 100%
+                .experience-title
+                    font-size: 2.8rem
+                    font-weight: bold
+                .experience
+                    display: flex
+                    gap: 10px
+                    margin-top: 20px
+                    position: relative
+                    .dog
+                        width: 15px
+                        height: 15px
+                        border-radius: 50%
+                        background: #1f59f9
+                        +m
+                            width: 21px
+                        +dark
+                            background: $violet
+
+                        &::before
+                            content: ""
+                            top: 15px
+                            left: 6px
+                            position: absolute
+                            height: 200px
+                            width: 2px
+                            background: #504f4f
+                            +m
+                                height: 270px
+                    .experience-log
+                        margin-top: -4px
+                        .desc
+                            font-weight: 600
+                            color: #1f59f9
+                            +dark
+                                color: $violet
+                        .btn
+                            width: 150px
+                            font-size: 1.4rem
+                            padding: 2px 0
+                            text-align: center
+                            background-color: rgba(105, 106, 108, 0.4)
+                            border-radius: 2px
+                            margin: 7px 0
+                        .text
+                            font-style: italic
+                            margin-bottom: 15px
